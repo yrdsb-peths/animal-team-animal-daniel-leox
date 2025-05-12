@@ -4,10 +4,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Elephant extends Actor
 {
     GreenfootSound elephantSound = new GreenfootSound("elephantcub.mp3");
-    GreenfootImage idle = new GreenfootImage("images/idle0.png");
+    GreenfootImage[] idle = new GreenfootImage[8];
     public Elephant()
     {
-        setImage(idle);
+        for(int i = 0; i < idle.length;i++)
+        {
+            idle[i] = new GreenfootImage("images/idle" + i + ".png");
+        }
+        setImage(idle[0]);
+    }
+    int imageIndex = 0;
+    public void animateElephant()
+    {
+        setImage(idle[imageIndex]);
+        imageIndex = (imageIndex + 1) % idle.length;
     }
     public void image()
     {
@@ -25,6 +35,7 @@ public class Elephant extends Actor
             move(5);
         }
         eat();
+        animateElephant();
     }
     public void eat()
     {
