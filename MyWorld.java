@@ -1,4 +1,4 @@
-import greenfoot.*;
+ import greenfoot.*;
 
 public class MyWorld extends World {
     public MyWorld() {
@@ -6,5 +6,8 @@ public class MyWorld extends World {
         
         Elephant elephant = new Elephant();
         addObject(elephant, 300,350);
+        
+        Apple apple = new Apple();
+        addObject(apple, 300, 0);
     }
 }
