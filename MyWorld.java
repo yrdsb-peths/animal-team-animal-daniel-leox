@@ -3,6 +3,7 @@
 public class MyWorld extends World {
     public int score = 0;
     Label scoreLabel;
+    int level = 0;
     public MyWorld() {
        
         super(600, 400, 1, false);
@@ -24,6 +25,9 @@ public class MyWorld extends World {
     {
         score++;
         scoreLabel.setValue(score);
+        if (score%5==0){
+            level +=1;
+        }
     }
     public void creatApple()
     {
@@ -31,5 +35,6 @@ public class MyWorld extends World {
         int x = Greenfoot.getRandomNumber(600) ;
         int y = 0;
         addObject(apple, x, y);
+        apple.setSpeed(level);
     }
 }
