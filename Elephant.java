@@ -49,7 +49,7 @@ public class Elephant extends Actor
     }
     public void act()
     {
-        image();
+        //image();
         if(Greenfoot.isKeyDown("left"))
         {
             move(-5);

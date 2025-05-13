@@ -4,6 +4,7 @@ public class MyWorld extends World {
     public int score = 0;
     Label scoreLabel;
     public MyWorld() {
+       
         super(600, 400, 1, false);
         
         Elephant elephant = new Elephant();
@@ -11,7 +12,7 @@ public class MyWorld extends World {
         
         scoreLabel = new Label(0,80);
         addObject(scoreLabel, 50,50);
-        
+        setBackground("images/background.jpg");
         creatApple();
     }
     public void gameOver()
