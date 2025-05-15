@@ -47,3 +47,19 @@ Communication with debug VM fully established.
 Communication with debug VM fully established.
 File F:\animal-team-animal-daniel-leox\MyWorld.java changed on disk; our record is 1747139246680 but file was 1747139914352
 File F:\animal-team-animal-daniel-leox\Apple.java changed on disk; our record is 1747139246666 but file was 1747140048007
+====
+
+====
+Greenfoot run started: Thu May 15 08:26:20 EDT 2025
+Greenfoot version: 3.9.0
+Build ID: 6c1390e0
+Java version 21.0.4
+JavaFX version 21.0.3+2
+Virtual machine: OpenJDK 64-Bit Server VM 21.0.4+7-LTS (Eclipse Adoptium)
+Running on: Windows 11 10.0 (amd64)
+Java Home: F:\Greenfoot-windows-390\greenfoot\jdk
+----
+Opening project: F:\animal-team-animal-daniel-leox
+1747311981783: Listening for JDWP connection on address: javadebug
+Connected to debug VM via dt_shmem transport...
+Communication with debug VM fully established.
