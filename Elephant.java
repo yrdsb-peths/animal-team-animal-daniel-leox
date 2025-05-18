@@ -10,6 +10,7 @@ public class Elephant extends Actor
     SimpleTimer animationTimer = new SimpleTimer();
     public Elephant()
     {
+        
         for(int i = 0; i < idleRight.length;i++)
         {
             idleRight[i] = new GreenfootImage("images/idle" + i + ".png");
@@ -50,15 +51,17 @@ public class Elephant extends Actor
     public void act()
     {
         //image();
-        if(Greenfoot.isKeyDown("left"))
-        {
-            move(-5);
-            facing = "left";
+        if(getX()-5>0){
+            if(Greenfoot.isKeyDown("left"))
+            {
+              move(-5);  
+            }
         }
-        else if (Greenfoot.isKeyDown("right"))
-        {
-            move(5);
-            facing = "right";
+        if(getX()+5<600){
+            if(Greenfoot.isKeyDown("Right"))
+            {
+              move(5);  
+            } 
         }
         eat();
         animateElephant();
