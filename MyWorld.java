@@ -5,6 +5,7 @@ public class MyWorld extends World {
     Label scoreLabel;
     int level = 0;
     int check=-1;
+    int apple=1;
     public MyWorld() {
        
         super(600, 400, 1, false);
@@ -33,8 +34,19 @@ public class MyWorld extends World {
     public void creatApple()
     {
         check++;
-        if (check >= score/5){
-            for(int i=score/5;i>=0;i--){
+        if (score%6==0 && score!=0){
+            apple++;
+            for(int i=0;i<apple;i++){
+                Apple apple = new Apple();
+                int x = Greenfoot.getRandomNumber(600) ;
+                int y = 0;
+                addObject(apple, x, y);
+                apple.setSpeed(level);     
+            }
+            check=0;
+        }
+        if (check >=apple|| score==0){
+            for(int i=0;i<apple;i++){
                 Apple apple = new Apple();
                 int x = Greenfoot.getRandomNumber(600) ;
                 int y = 0;
